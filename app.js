@@ -25,7 +25,7 @@ function queryJoke() {
     xhr.onload = function () {
       if (this.status === 200) {
         //console.log(this.responseText);
-        let output = '';
+        let output = `<ol><ol>`;
         const randomJoke = document.querySelector(".queryJoke");
         parsedJoke = JSON.parse(this.responseText);
         parsedJoke.result.forEach(function(jk){
@@ -34,6 +34,9 @@ function queryJoke() {
         //console.log(output);
         randomJoke.innerHTML = output;
         randomJoke.classList.add("border");
+        console.log(parsedJoke.total)
+        const searchCount = document.querySelector('.search-count');
+        searchCount.textContent = `Total Search Result(s): ${parsedJoke.total}`;
       }
     };
     xhr.send();
