@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .border {
+        border-style: solid;
+        border-radius: 1ch;
+        border-color: #8a7e7d;
+        border-width: 0.08cm;
+      }
+    </style>
+    <title>Check Norris Joke Generator</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Check Norris Joke Generator</h2>
+      <input type="button" value="Random Joke" id="random" />
+      <div class="randomJoke"></div>
+      <br /><br />
+      <input
+        type="text"
+        name="Query"
+        id="inputText"
+        placeholder="Enter text to search related joke"
+        class="u-full-width"
+      />
+      <input type="button" value="Search Joke" id="queryButton" />
+
+      <div class="queryJoke"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
